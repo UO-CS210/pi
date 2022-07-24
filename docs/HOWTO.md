@@ -20,9 +20,13 @@ you
 [view this document in on Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md)
 you will see it as it is intended to be read.  If you are seeing 
 text that looks like this
+
 ![Raw unformatted markdown](img/markdown-raw.png)
+
 or with parts that look like this 
+
 ![Formatted markdown without mathjax](img/mardown-no-mathjax.png)
+
 I recommend you 
 [read it through Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md). 
 
