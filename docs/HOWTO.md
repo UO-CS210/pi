@@ -10,6 +10,22 @@ number, it is not possible to represent it exactly with a Python
 floating point number, or with any rational number.  The best we can 
 do is an approximation.
 
+## Aside: How to read this document
+
+This HOWTO (`HOWTO.md`) is written in a notation called "Markdown", 
+which can be automatically translated to HTML for display.  It uses 
+an extension called "Mathjax" to format some mathematical 
+expressions. Github supports Markdown and Mathjax natively, so if 
+you
+[view this document in on Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md)
+you will see it as it is intended to be read.  If you are seeing 
+text that looks like this
+![Raw unformatted markdown](img/markdown-raw.png)
+or with parts that look like this 
+![Formatted markdown without mathjax](img/mardown-no-mathjax.png)
+I recommend you 
+[read it through Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md). 
+
 ## Approximation methods
 
 [Wikipedia](https://en.wikipedia.org/wiki/Approximations_of_%CF%80)
@@ -45,11 +61,11 @@ and counting the wins.
 
 We will base our Monte Carlo estimation of π by using a familiar 
 formula for the area of a circle, $a = π r^2$. With a little algebra 
-we can rewrite this as $\pi = \frac{a}{r^2}$.  So given any value $r$,
+we can rewrite this as $\pi = {a}/{r^2}$.  So given any value $r$,
 if we can obtain a good estimate for the area of a circle with that 
 radius, we can divide by the square of $r$ to get an estimate of π.  
 In particular, we could choose $r = 1$, because conveniently 
-$1^2 = 1$ and $\frac{a}{1} = a$.  
+$1^2 = 1$ and ${a}/{1} = a$.  
 
 The other formula we will use is the definition of a circle in a 
 Cartesian plane as consisting of all the points $(x,y)$ with 
@@ -86,7 +102,7 @@ more dimensions, rather than two) to estimate the volume of some
 very complex shape.  For other problems, like estimating the value 
 of a position in a board game, or the survival value of a behavior 
 for an organism, it is much harder to define what a "grid" might be. 
-This is where the randomness of a Monte Carlo simulation comes in:  
+This is where the randomness of a Monte Carlo simulation comes in: 
 We may be able to randomly sample a space of possibilities even if 
 it does not have a simple geometric form.  We can use Monte Carlo 
 method here as well, simply scattering points at random instead of 
@@ -96,9 +112,10 @@ laying them out in a grid.
 
 Our calculation method is the same whether we sample points along a 
 grid or sample them randomly:  If we sample $N$ points, we 
-expect
-$\pi N / 4$ of them to be within the quarter circle. 
+expect about $\pi N / 4$ of them to be within the quarter circle. 
 
 We will write a program to sample both ways, using a grid and randomly.
 
-## Start your (simulated) engines
+## Getting started
+
+If you have not already done so, download this 
