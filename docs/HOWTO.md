@@ -279,7 +279,7 @@ def in_unit_circle(x: float, y: float) -> bool:
     
     >>> in_unit_circle(0.0, 0.0)
     True
-    >>> in_unit_circle(1.0,1,0)
+    >>> in_unit_circle(1.0,1.0)
     False
     # You were wondering, weren't you? 
     >>> in_unit_circle(0.5, -0.5)
