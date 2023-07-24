@@ -15,25 +15,29 @@ do is an approximation.
 This HOWTO (`HOWTO.md`) is written in a notation called "Markdown", 
 which can be automatically translated to HTML for display.  It uses 
 an extension called "Mathjax" to format some mathematical 
-expressions. Github supports Markdown and Mathjax natively, so if 
-you
+expressions using the "MathML" faculty of the web. Github supports 
+Markdown and Mathjax natively, so if you
 [view this document in on Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md)
 you will see it as it is intended to be read.  If you are seeing 
 text that looks like this
 
-![Raw unformatted markdown](img/markdown-raw.png)
+![This is the raw, unformatted text with markup symbols like hash 
+marks to indicate heading levels](
+img/markdown-raw.png "Unformatted markdown")
 
 or with parts that look like this 
 
-![Formatted markdown without mathjax](img/mardown-no-mathjax.png)
+![Unformatted math in otherwise formatted markdown](
+img/mardown-no-mathjax.png "Markdown without mathjax")
 
 I recommend you 
 [read it through Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md). 
 
 ## Approximation methods
 
-[Wikipedia](https://en.wikipedia.org/wiki/Approximations_of_%CF%80)
-describes several methods that have been used for approximating π, 
+[A Wikipedia article on approximating pi](
+https://en.wikipedia.org/wiki/Approximations_of_%CF%80)
+describes several methods that have been used 
 from about 1000 BCE to current times.  Many of these involve rather 
 daunting mathematical formulae involving continued fractions or 
 series.  They are efficient, but difficult to understand. 
@@ -86,7 +90,9 @@ Choosing $r=1$ lets us simplify this to $x^2 + y^2 \leq 1$.
 Letting $r = 1$, we can imagine a circle of radius 1 inscribed 
 in a rectangle of area 4.  
 
-![A circle of radius 1 inscribed in a 2x2 square.](img/pi-estimate-unit-square.png)
+![Unit circle](
+img/pi-estimate-unit-square.png 
+"A circle of radius 1 inscribed in a 2x2 square.")
 
 We cannot count all the points within the circle or the square, 
 because there are an infinite number of them. However, we can 
@@ -100,13 +106,16 @@ our estimate will be to the true value of π.
 We might prefer to consider only positive values of $x$ and $y$,
 inscribing a quarter of a circle in a square of size 1.  
 
-![A quarter circle of radius 1 inscribed in a 1x1 square.](img/pi-quadrant.png)
+![Quarter of unit circle](
+img/pi-quadrant.png "A quarter circle of radius 1 
+inscribed in a 1x1 square.")
 
 If we do it this way, and again divide the square into very small
 pieces, we expect about $\pi / 4$ of them to be within the 
 quarter-circle.  It is easy to multiply by 4 to get π.
 
-![Dividing the unit square into a grid](img/pi-quadrant-grid.png)
+![Grid divisions](
+img/pi-quadrant-grid.png "Dividing the unit square into a grid")
 
 For this problem it would be easy to divide the unit square into an 
 evenly spaced grid.  We might use such a method (often in three or 
