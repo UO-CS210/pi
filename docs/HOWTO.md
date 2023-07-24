@@ -92,7 +92,10 @@ in a rectangle of area 4.
 
 ![Unit circle](
 img/pi-estimate-unit-square.png 
-"A circle of radius 1 inscribed in a 2x2 square.")
+"A circle of radius 1 inscribed in a 2x2 square.
+The square extends from point (-1, -1) to point (1, 1).
+The point (0.5, -0.5) is within the circle, but the point
+(-0.5, -0.9) is outside the circle.")
 
 We cannot count all the points within the circle or the square, 
 because there are an infinite number of them. However, we can 
