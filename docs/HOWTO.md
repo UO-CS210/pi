@@ -111,14 +111,22 @@ inscribing a quarter of a circle in a square of size 1.
 
 ![Quarter of unit circle](
 img/pi-quadrant.png "A quarter circle of radius 1 
-inscribed in a 1x1 square.")
+inscribed in a 1x1 square.  The square extends from
+point (0, 0) to point (1,1).  The quarter circle includes
+points with positive coordinates which have distance from
+the origin less than 1.0")
 
 If we do it this way, and again divide the square into very small
 pieces, we expect about $\pi / 4$ of them to be within the 
 quarter-circle.  It is easy to multiply by 4 to get π.
 
 ![Grid divisions](
-img/pi-quadrant-grid.png "Dividing the unit square into a grid")
+img/pi-quadrant-grid.png 
+"The square is divided into a grid of smaller squares.
+The center point of some of the smaller squares are 
+within the quarter circle, and the center point of other smaller
+square are outside the quarter circle. 
+")
 
 For this problem it would be easy to divide the unit square into an 
 evenly spaced grid.  We might use such a method (often in three or 
@@ -132,7 +140,12 @@ it does not have a simple geometric form.  With the Monte Carlo
 method, we  simply scatter points at random instead of 
 laying them out in a grid.
 
-![Scattered sampling in the unit square](img/pi-quadrant-scatter.png)
+![Scattered sampling](
+img/pi-quadrant-scatter.png
+"Instead of a grid, the points in this square are just
+scattered randomly.  Some are within the quarter circle,
+and some are outside it."
+)
 
 Our calculation method is the same whether we sample points along a 
 grid or sample them randomly:  If we sample $N$ points, we 
@@ -161,13 +174,19 @@ _stub_ that you will modify and turn in.  In future projects you
 will create the program file from scratch, but this time I have 
 provided a skeleton to help you get started. 
 
-### Open `pi_estimate.py` in IDLE
+### Open `pi_estimate.py`
 
-For this project, I assume you are using the IDLE environment that 
+For this project, most directions are written as if you
+were using the IDLE 
+environment that 
 comes with a Python distribution.  Open `pi_estimate.py` in IDLE.
 [This simple video](https://www.youtube.com/watch?v=1q0XojWVhoo)
 demonstrates how to do it in the MacOS Finder.  The concept is the 
 same in Windows, but of course the interface details will differ. 
+
+If you prefer to use an IDE like VSCode or PyCharm, you will open 
+the project directory and then select the file `pi_estimate.py`
+in an editor window of your IDE. 
 
 ### Fill in the header comment
 
@@ -190,11 +209,11 @@ Python comes with a rich assortment of "library" modules that we can
 use as foundations for our own programs.  We will use three of them 
 for this project: 
 
-- random : To select points with x and y coordinates in the range 
+- random: To select points with x and y coordinates in the range 
   0.0 to 1.0, we will use a pseudo-random number generator from the
   "random" module.  We make this available with the statement 
   `import random`. 
-- doctest : We need a good way to test our code, over and over as we 
+- doctest: We need a good way to test our code, over and over as we 
   develop it.  There are several "test frameworks" for Python.  Each 
   provides a way to write precise, executable tests that can be 
   re-run as often as we like with single command, so that we are 
@@ -204,7 +223,7 @@ for this project:
   with the statement `import doctest`.
 
 In addition, we will import one module of our own,
-`graphics.point_plot`, so that we can observe how our estimation 
+`points_plot`, so that we can observe how our estimation 
 method works.  Python provides a built-in graphics and user 
 interface library, tkinter.  In contrast to the general high 
 quality of Python libraries, tkinter is baroque and 
@@ -212,6 +231,13 @@ inconsistent with Python conventions.  `graphics.point_plot` uses
 the underlying functionality of tkinter, but 
 provides a simplified, more consistent application program interface 
 (API) for plotting. 
+
+If you prefer an audio interface, you can use replace
+`import points_plot` by `import sound_plot as points_plot`.  
+
+FIXME: `sound_plot.py` has not been written, and `points_plot.py` will 
+require revision so that `sound_plot.py` can have reasonable 
+behavior with the same calls. 
 
 ### Where to start?  Testable steps. 
 
@@ -355,7 +381,8 @@ can't test them very well, because by design they are not
 individually predictable.  With more effort we could devise a test 
 for uniform distribution by generating a lot of points and counting 
 the number in different ranges.  We'll take an easier way out, just 
-plotting points and judging by eye that they appear scattered over 
+plotting points and judging that they appear 
+scattered over 
 the whole range. 
 
 The header of the random point generator will say that it takes no 
