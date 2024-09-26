@@ -10,28 +10,13 @@ number, it is not possible to represent it exactly with a Python
 floating point number, or with any rational number.  The best we can 
 do is an approximation.
 
-## Aside: How to read this document
+### Aside: How to read this document
 
-This HOWTO (`HOWTO.md`) is written in a notation called "Markdown", 
-which can be automatically translated to HTML for display.  It uses 
-an extension called "Mathjax" to format some mathematical 
-expressions using the "MathML" faculty of the web. Github supports 
-Markdown and Mathjax natively, so if you
+If you are seeing hash marks like `## Aside`, you may be seeing the 
+raw unformatted text.  Read this document in a Markdown viewer, or 
 [view this document in on Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md)
-you will see it as it is intended to be read.  If you are seeing 
+to see it as it is intended to be read.  If you are seeing 
 text that looks like this
-
-![This is the raw, unformatted text with markup symbols like hash 
-marks to indicate heading levels](
-img/markdown-raw.png "Unformatted markdown")
-
-or with parts that look like this 
-
-![Unformatted math in otherwise formatted markdown](
-img/mardown-no-mathjax.png "Markdown without mathjax")
-
-I recommend you 
-[read it through Github](https://github.com/UO-CS210/pi/blob/main/docs/HOWTO.md). 
 
 ## Approximation methods
 
